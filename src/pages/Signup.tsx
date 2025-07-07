@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Hero from '../components/Hero';
 
 const Signup = () => {
   const [formData, setFormData] = useState({
@@ -167,24 +168,9 @@ const Signup = () => {
           </div>
         </div>
 
-        {/* Right side - Image */}
-        <div className="hidden lg:flex flex-1 relative overflow-hidden">
-          <div 
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{
-              backgroundImage: `url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80')`
-            }}
-          >
-            <div className="absolute inset-0 bg-primary/20"></div>
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="text-center text-white p-8">
-                <h3 className="text-3xl font-light mb-4">Join our community</h3>
-                <p className="text-lg opacity-90 max-w-md">
-                  Connect with like-minded individuals and start your journey with us today.
-                </p>
-              </div>
-            </div>
-          </div>
+        {/* Right side - Hero */}
+        <div className="hidden lg:flex flex-1">
+          <Hero />
         </div>
       </div>
     </div>
